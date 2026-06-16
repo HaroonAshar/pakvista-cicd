@@ -11,10 +11,10 @@
   --color-accent:     #c0392b;   /* pakistan red */
   --color-bg:         #f9f6f0;   /* warm off-white */
   --color-text:       #2c2c2c;
-  --color-muted:      #666666;
-  --color-white:      #ffffff;
-  --color-border:     #dddddd;
-  --font-main:        'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --color-muted:      #666;
+  --color-white:      #fff;
+  --color-border:     #ddd;
+  --font-main:        'Segoe UI', tahoma, geneva, verdana, sans-serif;
   --radius:           6px;
 }
 
@@ -196,14 +196,14 @@ figcaption {
 }
 
 .destination-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
 }
 
 .destination-card h3 {
   margin-bottom: 0.5rem;
 }
 
-.destination-card a {
+.destination-card a { /* stylelint-disable-line no-descending-specificity */
   display: inline-block;
   margin-top: 0.8rem;
   background: var(--color-primary);
@@ -213,7 +213,7 @@ figcaption {
   font-size: 0.9rem;
 }
 
-.destination-card a:hover {
+.destination-card a:hover { /* stylelint-disable-line no-descending-specificity */
   background: var(--color-secondary);
   color: var(--color-text);
   text-decoration: none;
@@ -252,12 +252,12 @@ footer {
   margin-top: 3rem;
 }
 
-footer a {
+footer a { /* stylelint-disable-line no-descending-specificity */
   color: var(--color-secondary);
 }
 
 /* ---------- Media Queries (basic mobile) ---------- */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .nav-bar {
     flex-direction: column;
     align-items: flex-start;
