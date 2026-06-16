@@ -27,8 +27,11 @@ jobs:
       - name: Lint HTML
         run: htmlhint "*.html"
 
+      - name: Create stylelint config
+        run: echo '{"extends":["stylelint-config-standard"]}' > .stylelintrc.json
+
       - name: Lint CSS
-        run: stylelint "*.css" --config '{"extends":"stylelint-config-standard"}'
+        run: stylelint "*.css"
 
       # Step 3 – Docker Login
       - name: Log in to Docker Hub
