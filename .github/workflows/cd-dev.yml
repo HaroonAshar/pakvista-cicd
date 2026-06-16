@@ -1,0 +1,31 @@
+# CD Workflow – Development Environment
+# Trigger: Push to develop branch
+# Responsibility: Member 2
+
+name: CD – Development
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  cd-dev:
+    name: Deploy to Render (Development)
+    runs-on: ubuntu-latest
+    environment: development
+
+    steps:
+      # Step 1 – Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2 – Environment is declared above (environment: development)
+
+      # Step 3 – Deploy via Render deploy hook
+      - name: Trigger Render deployment
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_DEV_URL }}
+
+      # Step 4 – Confirm
+      - name: Confirm deployment
+        run: echo "Deployment to development triggered at $(date)"
