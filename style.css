@@ -6,22 +6,20 @@
 
 /* ---------- CSS Variables (Color Palette) ---------- */
 :root {
-  --color-primary: #1a6b3c; /* deep green */
-  --color-secondary: #f4a422; /* golden yellow */
-  --color-accent: #c0392b; /* pakistan red */
-  --color-bg: #f9f6f0; /* warm off-white */
-  --color-text: #2c2c2c;
-  --color-muted: #666;
-  --color-white: #fff;
-  --color-border: #ddd;
-  --font-main: "Segoe UI", tahoma, geneva, verdana, sans-serif;
-  --radius: 6px;
+  --color-primary:    #1a6b3c;   /* deep green */
+  --color-secondary:  #f4a422;   /* golden yellow */
+  --color-accent:     #c0392b;   /* pakistan red */
+  --color-bg:         #f9f6f0;   /* warm off-white */
+  --color-text:       #2c2c2c;
+  --color-muted:      #666;
+  --color-white:      #fff;
+  --color-border:     #ddd;
+  --font-main:        'Segoe UI', tahoma, geneva, verdana, sans-serif;
+  --radius:           6px;
 }
 
 /* ---------- Reset & Base ---------- */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -205,8 +203,7 @@ figcaption {
   margin-bottom: 0.5rem;
 }
 
-.destination-card a {
-  /* stylelint-disable-line no-descending-specificity */
+.destination-card a { /* stylelint-disable-line no-descending-specificity */
   display: inline-block;
   margin-top: 0.8rem;
   background: var(--color-primary);
@@ -216,8 +213,7 @@ figcaption {
   font-size: 0.9rem;
 }
 
-.destination-card a:hover {
-  /* stylelint-disable-line no-descending-specificity */
+.destination-card a:hover { /* stylelint-disable-line no-descending-specificity */
   background: var(--color-secondary);
   color: var(--color-text);
   text-decoration: none;
@@ -256,8 +252,7 @@ footer {
   margin-top: 3rem;
 }
 
-footer a {
-  /* stylelint-disable-line no-descending-specificity */
+footer a { /* stylelint-disable-line no-descending-specificity */
   color: var(--color-secondary);
 }
 
