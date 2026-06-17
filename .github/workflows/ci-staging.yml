@@ -1,0 +1,51 @@
+# CI Workflow – Staging Environment
+# Trigger: Pull Request targeting the staging branch
+# Responsibility: Member 3
+
+name: CI – Staging
+
+on:
+  pull_request:
+    branches:
+      - staging
+
+jobs:
+  ci-staging:
+    name: Build & Push Docker Image (staging)
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1 – Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2 – Lint & Build
+      - name: Install Node & Linting tools
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard
+
+      - name: Lint HTML
+        run: htmlhint "*.html"
+
+      - name: Create stylelint config
+        run: echo '{"extends":["stylelint-config-standard"]}' > .stylelintrc.json
+
+      - name: Lint CSS
+        run: stylelint "*.css"
+
+      # Step 3 – Docker Login
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Step 4 & 5 & 6 – Build, Tag, Push
+      - name: Build and push Docker image (staging)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/pakvista-cicd:staging-latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/pakvista-cicd:staging-${{ github.sha }}
