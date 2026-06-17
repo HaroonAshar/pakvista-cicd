@@ -299,10 +299,11 @@ footer a { /* stylelint-disable-line no-descending-specificity */
   color: #475569;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .karachi-page .nav-bar a:hover {
+  background-color: transparent;
   color: var(--color-primary);
 }
 
