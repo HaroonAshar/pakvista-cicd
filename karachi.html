@@ -5,6 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karachi - City of Lights | PakVista</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .karachi-hero {
+      background:
+        linear-gradient(135deg, rgb(10 66 76 / 94%), rgb(26 107 60 / 84%)),
+        linear-gradient(90deg, rgb(244 164 34 / 24%), transparent 58%);
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+    }
+
+    .karachi-hero p {
+      color: #f4fbf8;
+      max-width: 760px;
+    }
+
+    .intro-panel {
+      background: var(--color-white);
+      border-left: 5px solid var(--color-secondary);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+    }
+
+    .karachi-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .highlight-tile {
+      background: #fff8ec;
+      border: 1px solid #efd6a8;
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    .highlight-tile strong {
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .attraction-card {
+      border-top: 4px solid var(--color-secondary);
+      box-shadow: 0 8px 22px rgb(0 0 0 / 8%);
+    }
+
+    .karachi-art {
+      background:
+        linear-gradient(135deg, rgb(26 107 60 / 14%), rgb(244 164 34 / 20%)),
+        #eef5f2;
+      border: 1px solid #b8d8c4;
+      border-radius: var(--radius);
+      display: block;
+      height: auto;
+      margin: 1rem 0;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .info-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+
+    .info-card h3 {
+      margin-bottom: 0.4rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +99,7 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero karachi-hero">
     <h1>Karachi - City of Lights</h1>
     <p>
       Pakistan's largest city blends coastal views, historic architecture,
@@ -33,7 +111,7 @@
   <main>
 
     <!-- Introduction -->
-    <section>
+    <section class="intro-panel">
       <h2>Welcome to Karachi</h2>
       <p>
         Karachi is the capital of Sindh and the economic hub of Pakistan. Set
@@ -47,13 +125,27 @@
         attractions below highlight its beach life, architectural heritage, and
         connection with the sea.
       </p>
+      <div class="karachi-highlights">
+        <div class="highlight-tile">
+          <strong>Coastal Energy</strong>
+          <span>Arabian Sea views, beaches, seafood, and breezy evenings.</span>
+        </div>
+        <div class="highlight-tile">
+          <strong>Urban Culture</strong>
+          <span>Markets, museums, galleries, and food streets open late.</span>
+        </div>
+        <div class="highlight-tile">
+          <strong>Heritage Stops</strong>
+          <span>Palaces, public landmarks, and maritime history in one city.</span>
+        </div>
+      </div>
     </section>
 
     <!-- Top Attractions -->
     <section>
       <h2>Top Attractions in Karachi</h2>
 
-      <article>
+      <article class="attraction-card">
         <h3>Clifton Beach</h3>
         <p>
           Clifton Beach is one of Karachi's most visited seaside spots, drawing
@@ -61,9 +153,51 @@
           Visitors come for sea breezes, sunset views, camel and horse rides,
           nearby restaurants, and a relaxed break from the city's busy roads.
         </p>
+        <p>
+          The beach is especially popular in the evening, when the temperature
+          drops and the promenade fills with food stalls, tea vendors, and
+          visitors enjoying the Arabian Sea. It is also close to Dolmen Mall,
+          Sea View Road, and several well-known restaurants, making it an easy
+          first stop for anyone exploring Karachi's coast.
+        </p>
+        <figure>
+          <svg class="karachi-art" viewBox="0 0 900 260" role="img" aria-labelledby="clifton-title clifton-desc">
+            <title id="clifton-title">Clifton Beach at sunset</title>
+            <desc id="clifton-desc">A stylized shoreline with waves, sunset, beach umbrellas, and Karachi's coastal skyline.</desc>
+            <defs>
+              <linearGradient id="clifton-sky" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#bfe3df" />
+                <stop offset="0.58" stop-color="#f7d88a" />
+                <stop offset="1" stop-color="#f4a422" />
+              </linearGradient>
+              <linearGradient id="clifton-sea" x1="0" x2="1">
+                <stop offset="0" stop-color="#0d7782" />
+                <stop offset="1" stop-color="#42a9a7" />
+              </linearGradient>
+            </defs>
+            <rect width="900" height="260" fill="url(#clifton-sky)" />
+            <circle cx="700" cy="70" r="36" fill="#fff1b8" />
+            <path d="M0 112h70l28-32 28 32h46l18-22 18 22h692v58H0z" fill="#497173" opacity="0.28" />
+            <rect x="90" y="98" width="32" height="54" fill="#2f6465" opacity="0.45" />
+            <rect x="136" y="82" width="28" height="70" fill="#2f6465" opacity="0.45" />
+            <rect x="184" y="106" width="54" height="46" fill="#2f6465" opacity="0.45" />
+            <path d="M0 142c82-20 148 18 230 0s152-20 238 0 152 18 230 0 140-14 202 0v70H0z" fill="url(#clifton-sea)" />
+            <path d="M0 176c92 16 150-12 238 0s152 16 236 0 152-14 234 0 132 10 192 0" fill="none" stroke="#e8fffb" stroke-width="5" opacity="0.8" />
+            <path d="M0 206c72 12 136-10 210 0s134 14 212 0 148-12 226 0 150 10 252-4v58H0z" fill="#e8c981" />
+            <path d="M116 214l46-46 46 46z" fill="#c0392b" />
+            <path d="M162 168v72" stroke="#7a5130" stroke-width="5" />
+            <path d="M610 219h104c-10 18-32 28-54 28s-40-9-50-28z" fill="#7a5130" />
+            <path d="M666 219c5-26 26-42 56-48" fill="none" stroke="#7a5130" stroke-width="5" />
+            <circle cx="732" cy="169" r="8" fill="#7a5130" />
+            <path d="M754 170c22 8 34 24 42 46" fill="none" stroke="#7a5130" stroke-width="5" />
+          </svg>
+          <figcaption>
+            Evening views and sea breeze along Karachi's popular Clifton Beach.
+          </figcaption>
+        </figure>
       </article>
 
-      <article>
+      <article class="attraction-card">
         <h3>Mohatta Palace</h3>
         <p>
           Mohatta Palace is a striking heritage building in Clifton, designed
@@ -72,9 +206,51 @@
           a museum and cultural space, hosting exhibitions that connect visitors
           with Pakistan's art, history, and public memory.
         </p>
+        <p>
+          Built as a private residence, the palace is now one of the city's most
+          recognizable landmarks. Its spacious lawns, carved details, and gallery
+          rooms make it a strong introduction to Karachi's heritage beyond its
+          beaches and commercial districts.
+        </p>
+        <figure>
+          <svg class="karachi-art" viewBox="0 0 900 260" role="img" aria-labelledby="mohatta-title mohatta-desc">
+            <title id="mohatta-title">Mohatta Palace facade</title>
+            <desc id="mohatta-desc">A stylized heritage palace with domes, arches, carved stonework, and gardens.</desc>
+            <rect width="900" height="260" fill="#f3ead9" />
+            <circle cx="104" cy="72" r="42" fill="#f4a422" opacity="0.25" />
+            <path d="M0 216h900v44H0z" fill="#c9d8b8" />
+            <path d="M154 134h592v82H154z" fill="#d6b483" />
+            <path d="M212 104h476v116H212z" fill="#e4c693" />
+            <path d="M278 82h344v138H278z" fill="#d6b483" />
+            <path d="M322 76c0-42 54-42 54 0v18h-54z" fill="#c0392b" />
+            <path d="M424 56c0-50 64-50 64 0v36h-64z" fill="#c0392b" />
+            <path d="M524 76c0-42 54-42 54 0v18h-54z" fill="#c0392b" />
+            <rect x="312" y="94" width="276" height="22" fill="#b9875e" />
+            <rect x="184" y="128" width="532" height="20" fill="#b9875e" />
+            <g fill="#7f513f">
+              <path d="M250 220v-50c0-36 48-36 48 0v50z" />
+              <path d="M350 220v-50c0-36 48-36 48 0v50z" />
+              <path d="M452 220v-50c0-36 48-36 48 0v50z" />
+              <path d="M554 220v-50c0-36 48-36 48 0v50z" />
+              <path d="M654 220v-50c0-36 48-36 48 0v50z" />
+            </g>
+            <g fill="#f5e2bb" opacity="0.9">
+              <rect x="230" y="136" width="22" height="74" />
+              <rect x="300" y="136" width="22" height="74" />
+              <rect x="404" y="124" width="26" height="86" />
+              <rect x="504" y="124" width="26" height="86" />
+              <rect x="608" y="136" width="22" height="74" />
+              <rect x="704" y="136" width="22" height="74" />
+            </g>
+            <path d="M118 228c64-30 122-26 166 0M596 228c58-34 126-30 186 0" fill="none" stroke="#1a6b3c" stroke-width="12" stroke-linecap="round" />
+          </svg>
+          <figcaption>
+            The ornate facade and domes of the historic Mohatta Palace.
+          </figcaption>
+        </figure>
       </article>
 
-      <article>
+      <article class="attraction-card">
         <h3>Pakistan Maritime Museum</h3>
         <p>
           The Pakistan Maritime Museum presents the country's naval and maritime
@@ -83,35 +259,37 @@
           understand Karachi's long relationship with ports, shipping, and sea
           defense.
         </p>
+        <p>
+          The museum's open-air displays, lake area, and naval equipment make it
+          more interactive than a traditional gallery visit. It is a practical
+          choice for travelers who want an educational stop that still feels
+          relaxed and family friendly.
+        </p>
+        <figure>
+          <svg class="karachi-art" viewBox="0 0 900 260" role="img" aria-labelledby="maritime-title maritime-desc">
+            <title id="maritime-title">Pakistan Maritime Museum exhibits</title>
+            <desc id="maritime-desc">A stylized submarine, aircraft, museum building, and water representing maritime exhibits.</desc>
+            <rect width="900" height="260" fill="#dbeeea" />
+            <path d="M0 182c78-16 142 12 220 0s142-16 220 0 142 16 220 0 156-14 240 0v78H0z" fill="#5db8b2" />
+            <path d="M46 206c70 10 126-8 202 0s132 10 204 0 138-10 210 0 144 8 238-2" fill="none" stroke="#eafffb" stroke-width="5" opacity="0.85" />
+            <path d="M144 158h254c-16 40-60 62-128 62s-110-20-126-62z" fill="#314d5b" />
+            <rect x="238" y="118" width="76" height="42" rx="8" fill="#314d5b" />
+            <circle cx="206" cy="168" r="9" fill="#dbeeea" />
+            <circle cx="254" cy="168" r="9" fill="#dbeeea" />
+            <circle cx="302" cy="168" r="9" fill="#dbeeea" />
+            <path d="M534 136h214v78H534z" fill="#e6c282" />
+            <path d="M506 136l134-70 136 70z" fill="#c0392b" />
+            <rect x="572" y="162" width="38" height="52" fill="#7f513f" />
+            <rect x="638" y="162" width="82" height="34" fill="#f7ead0" />
+            <path d="M86 98l170 26 140-28-122 58-20 54-34-48-134-62z" fill="#f4f8f6" stroke="#547984" stroke-width="5" stroke-linejoin="round" />
+            <path d="M248 124l66-72 4 62z" fill="#d9e3e0" stroke="#547984" stroke-width="5" stroke-linejoin="round" />
+            <path d="M664 82c32 0 58-16 76-42 22 26 50 40 86 42-42 14-70 36-86 68-16-32-42-54-76-68z" fill="#f4a422" opacity="0.5" />
+          </svg>
+          <figcaption>
+            Naval exhibits and maritime displays at the Pakistan Maritime Museum.
+          </figcaption>
+        </figure>
       </article>
-    </section>
-
-    <!-- Image Placeholders -->
-    <section>
-      <h2>A Glimpse of Karachi</h2>
-
-      <figure>
-        <div class="img-placeholder">📸 Clifton Beach - Image Placeholder</div>
-        <figcaption>
-          Evening views and sea breeze along Karachi's popular Clifton Beach.
-        </figcaption>
-      </figure>
-
-      <figure>
-        <div class="img-placeholder">📸 Mohatta Palace - Image Placeholder</div>
-        <figcaption>
-          The ornate facade and domes of the historic Mohatta Palace.
-        </figcaption>
-      </figure>
-
-      <figure>
-        <div class="img-placeholder">
-          📸 Pakistan Maritime Museum - Image Placeholder
-        </div>
-        <figcaption>
-          Naval exhibits and maritime displays at the Pakistan Maritime Museum.
-        </figcaption>
-      </figure>
     </section>
 
     <!-- Quick Facts Table -->
@@ -144,6 +322,71 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <!-- Visitor Information -->
+    <section>
+      <h2>Visitor Information</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Detail</th>
+            <th>Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Best Time to Visit</td>
+            <td>November to March for cooler weather and comfortable sightseeing</td>
+          </tr>
+          <tr>
+            <td>Nearest Airport</td>
+            <td>Jinnah International Airport, Karachi</td>
+          </tr>
+          <tr>
+            <td>Known For</td>
+            <td>Coastline, museums, seafood, markets, and urban culture</td>
+          </tr>
+          <tr>
+            <td>Must-Try Food</td>
+            <td>Biryani, bun kebab, seafood, nihari, and roadside chai</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Why Visit Karachi -->
+    <section>
+      <h2>Why Visit Karachi?</h2>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Coastal City Life</h3>
+          <p>
+            Karachi gives visitors access to Pakistan's Arabian Sea coastline,
+            with beaches, promenades, seafood restaurants, and sea-breeze evenings
+            that feel different from inland destinations.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Culture and Heritage</h3>
+          <p>
+            From Mohatta Palace to historic neighborhoods and museums, Karachi
+            preserves stories of trade, migration, architecture, and public life
+            from many eras of Pakistan's history.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Food and Markets</h3>
+          <p>
+            The city is famous for late-night food streets, busy bazaars, and a
+            mix of regional flavors brought by communities from across Pakistan.
+          </p>
+        </article>
+      </div>
     </section>
 
   </main>
