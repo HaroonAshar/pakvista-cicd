@@ -400,12 +400,15 @@ footer a { /* stylelint-disable-line no-descending-specificity */
 
 .karachi-page .attraction-card {
   background: var(--color-white);
+  border: 1px solid var(--color-border);
   border-top: 4px solid var(--color-secondary);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  margin: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 .karachi-page .card-content {
