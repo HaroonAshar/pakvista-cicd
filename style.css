@@ -1,0 +1,505 @@
+/* =============================================
+   PakVista – Shared Stylesheet
+   All pages must link to this file.
+   Do NOT create separate CSS files.
+============================================= */
+
+/* ---------- CSS Variables (Color Palette) ---------- */
+:root {
+  --color-primary:    #1a6b3c;   /* deep green */
+  --color-secondary:  #f4a422;   /* golden yellow */
+  --color-accent:     #c0392b;   /* pakistan red */
+  --color-bg:         #f9f6f0;   /* warm off-white */
+  --color-text:       #2c2c2c;
+  --color-muted:      #666;
+  --color-white:      #fff;
+  --color-border:     #ddd;
+  --font-main:        'Segoe UI', tahoma, geneva, verdana, sans-serif;
+  --radius:           6px;
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 0.2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ---------- Navigation Bar ---------- */
+.nav-bar {
+  background-color: var(--color-primary);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-bar .nav-logo {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  letter-spacing: 1px;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-bar ul li a {
+  color: var(--color-white);
+  padding: 1rem 0.8rem;
+  display: block;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.nav-bar ul li a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+
+/* ---------- Header / Hero ---------- */
+header.hero {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+header.hero h1 {
+  color: var(--color-white);
+  font-size: 2.8rem;
+}
+
+header.hero p {
+  color: #d4edda;
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0.8rem auto 0;
+}
+
+/* ---------- Main Content ---------- */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+article {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Image Placeholder ---------- */
+.img-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 220px;
+  background-color: #e0e0e0;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* ---------- Destination Cards (Home page) ---------- */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.destination-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.destination-card:hover {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+}
+
+.destination-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.destination-card a { /* stylelint-disable-line no-descending-specificity */
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.destination-card a:hover { /* stylelint-disable-line no-descending-specificity */
+  background: var(--color-secondary);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+tr:nth-child(even) td {
+  background-color: #f0f0f0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--color-primary);
+  color: #cce5d6;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+footer a { /* stylelint-disable-line no-descending-specificity */
+  color: var(--color-secondary);
+}
+
+/* ---------- Karachi Page ---------- */
+.karachi-page {
+  --color-primary: #0a424c;
+  --color-secondary: #1a6b3c;
+  --color-accent: #f4a422;
+  --color-bg: #f8fbf9;
+  --color-white: #ffffff;
+  --color-border: #e2e8f0;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  background-color: var(--color-bg);
+  color: #334155;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.karachi-page .nav-bar {
+  align-items: center;
+  background: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+}
+
+.karachi-page .nav-bar .nav-logo {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.karachi-page .nav-bar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.karachi-page .nav-bar a {
+  color: #475569;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.karachi-page .nav-bar a:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.karachi-page .karachi-hero {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(10, 66, 76, 0.92), rgba(26, 107, 60, 0.85)),
+    url('https://stdc.gos.pk/wp-content/uploads/2024/10/Mazar-e-Quaid-Canvas-16x20-1-2048x1544.jpg') center / cover no-repeat;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.karachi-page .karachi-hero h1 {
+  font-size: 3rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.karachi-page .karachi-hero p {
+  color: #e2f1ec;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 700px;
+}
+
+.karachi-page main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 3rem auto;
+  max-width: 1100px;
+  padding: 0 2rem;
+}
+
+.karachi-page .intro-panel {
+  background: var(--color-white);
+  border-left: 6px solid var(--color-secondary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+}
+
+.karachi-page .intro-panel h2 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.karachi-page section > h2 {
+  color: var(--color-primary);
+}
+
+.karachi-page .attractions-section > h2 {
+  margin-bottom: 2rem;
+}
+
+.karachi-page .karachi-highlights {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
+}
+
+.karachi-page .highlight-tile {
+  background: #fdfaf4;
+  border: 1px solid #f1e3cb;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.karachi-page .highlight-tile:hover {
+  box-shadow: 0 6px 16px rgba(244, 164, 34, 0.08);
+  transform: translateY(-2px);
+}
+
+.karachi-page .highlight-tile strong {
+  color: var(--color-accent);
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.karachi-page .grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.karachi-page .attraction-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-secondary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.karachi-page .card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+.karachi-page .attraction-card h3 {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.karachi-page .attraction-image {
+  background-color: #eaeaea;
+  display: block;
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.karachi-page .info-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.karachi-page .info-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: rgba(0, 0, 0, 0.01) 0 4px 12px;
+  padding: 1.75rem;
+}
+
+.karachi-page table {
+  background: var(--color-white);
+  border-collapse: collapse;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  width: 100%;
+}
+
+.karachi-page th,
+.karachi-page td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.karachi-page th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.karachi-page tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+.karachi-page tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.karachi-page footer {
+  background: var(--color-primary);
+  color: #cbd5e1;
+  margin-top: 5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* ---------- Media Queries (basic mobile) ---------- */
+@media (width <= 600px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header.hero h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+}
