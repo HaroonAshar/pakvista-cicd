@@ -3,195 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karachi - City of Lights | PakVista</title>
+  <meta name="description" content="Discover Karachi — Pakistan's vibrant coastal megacity, home to Clifton Beach, the Quaid's Mausoleum, and a buzzing food and culture scene.">
+  <title>Karachi – City of Lights | PakVista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="karachi-page">
+<body>
 
+  <!-- Navigation -->
   <nav class="nav-bar">
     <span class="nav-logo">🌿 PakVista</span>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="lahore.html">Lahore</a></li>
       <li><a href="hunza.html">Hunza</a></li>
-      <li><a href="karachi.html">Karachi</a></li>
+      <li><a href="karachi.html" class="active">Karachi</a></li>
       <li><a href="swat.html">Swat</a></li>
     </ul>
   </nav>
 
-  <header class="hero karachi-hero">
-    <h1>Karachi - City of Lights</h1>
-    <p>
-      Pakistan's largest city blends coastal views, historic architecture,
-      maritime heritage, busy markets, and a food culture that stays awake late
-      into the night.
-    </p>
+  <!-- Hero -->
+  <header class="hero hero-karachi">
+    <div class="hero-inner">
+      <span class="eyebrow">Sindh, Pakistan</span>
+      <h1>Karachi – City of Lights</h1>
+      <p>Pakistan's largest city and economic powerhouse — a vibrant coastal metropolis of golden beaches, grand monuments, museums, and round-the-clock energy.</p>
+      <div class="hero-actions">
+        <a href="#attractions" class="btn">Top Attractions</a>
+        <a href="index.html" class="btn btn-ghost">All Destinations</a>
+      </div>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
   </header>
 
   <main>
-    <section class="intro-panel">
-      <h2>Welcome to Karachi</h2>
-      <p>
-        Karachi is the capital of Sindh and the economic hub of Pakistan. Set
-        along the Arabian Sea, the city is known for its fast pace, diverse
-        communities, colonial-era buildings, seaside promenades, museums, and
-        lively food streets.
-      </p>
-      <div class="karachi-highlights">
-        <div class="highlight-tile">
-          <strong>Coastal Energy</strong>
-          <span>Arabian Sea views, beaches, seafood, and breezy evenings.</span>
+
+    <!-- Introduction -->
+    <section class="section">
+      <div class="container prose reveal">
+        <span class="eyebrow">Introduction</span>
+        <h2>Welcome to Karachi</h2>
+        <p>
+          Sitting on the shores of the Arabian Sea, Karachi is the capital of Sindh and the largest city
+          in Pakistan, home to more than 16 million people. As the country's financial and industrial
+          hub, it never sleeps — its streets pulse with commerce, its kitchens serve some of the finest
+          food in South Asia, and its coastline draws crowds from dawn until long after dark.
+        </p>
+        <p>
+          A true melting pot, Karachi blends colonial-era architecture, modern skylines, bustling bazaars,
+          and a seaside that defines daily life for its residents.
+        </p>
+      </div>
+    </section>
+
+    <!-- Landmarks -->
+    <section class="section section-tinted" id="attractions">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Must-see</span>
+          <h2>Top Attractions in Karachi</h2>
+          <p>From the founder's marble mausoleum to the breezy shores of the Arabian Sea.</p>
         </div>
-        <div class="highlight-tile">
-          <strong>Urban Culture</strong>
-          <span>Markets, museums, galleries, and food streets open late.</span>
+
+        <article class="reveal d1">
+          <h3>Quaid's Mausoleum (Mazar-e-Quaid)</h3>
+          <p>
+            The final resting place of Muhammad Ali Jinnah, the founder of Pakistan, this iconic white
+            marble mausoleum was completed in 1971. Set within a large landscaped park, its gleaming domes
+            and ceremonial guard make it the most recognisable landmark in the city.
+          </p>
+        </article>
+
+        <article class="reveal d2">
+          <h3>Clifton Beach &amp; Seaview</h3>
+          <p>
+            Karachi's most popular seaside escape, Clifton Beach stretches for kilometres along the Arabian
+            Sea. Locals flock here for camel rides, street food, and sea breeze, making it the beating
+            heart of the city's leisure life — especially at sunset.
+          </p>
+        </article>
+
+        <article class="reveal d3">
+          <h3>Mohatta Palace &amp; Bazaars</h3>
+          <p>
+            A short drive away, the elegant Mohatta Palace museum showcases the city's heritage, while the
+            historic Empress Market and Saddar bazaars overflow with spices, textiles, and crafts — a
+            sensory introduction to Karachi's trading soul.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">In pictures</span>
+          <h2>A Glimpse of Karachi</h2>
+          <p>A modern skyline rising beside the timeless Arabian Sea.</p>
         </div>
-        <div class="highlight-tile">
-          <strong>Heritage Stops</strong>
-          <span>Palaces, public landmarks, and maritime history in one city.</span>
+
+        <div class="gallery">
+          <figure class="reveal d1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Dolmen_Towers_Karachi.jpg" alt="The coastal skyline of Karachi" loading="lazy">
+            <figcaption>Karachi's seaside skyline</figcaption>
+          </figure>
+          <figure class="reveal d2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ali_Mujtaba_WLM2017_FAISAL_MOSQUE_019.jpg" alt="A grand mosque illuminated at dusk" loading="lazy">
+            <figcaption>Grand mosque architecture</figcaption>
+          </figure>
+          <figure class="reveal d3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Minar_e_Pakistan_2021.jpg" alt="A national monument of Pakistan at night" loading="lazy">
+            <figcaption>National heritage &amp; monuments</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="attractions-section">
-      <h2>Top Attractions in Karachi</h2>
-      <div class="grid-container">
-
-        <article class="attraction-card">
-          <img class="attraction-image" src="https://coinventmediastorage.blob.core.windows.net/media-storage-container/gphoto_EidTZWEgVmlldyBSZCwgQ2xpZnRvbiwgS2FyYWNoaSwgUGFraXN0YW4iLiosChQKEgkLPvSdxTyzPhFBuWoZPAcIuRIUChIJv3UY3Ls9sz4R2P5mOqtyZWo_1.jpg" alt="Clifton Beach" loading="lazy" decoding="async">
-          <div class="card-content">
-            <h3>Clifton Beach</h3>
-            <p>One of Karachi's most visited seaside spots, drawing families and photographers to its long sandy shoreline for sea breezes, camel rides, and vibrant evening food stalls along the Arabian Sea.</p>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <img class="attraction-image" src="https://stdc.gos.pk/wp-content/uploads/2024/10/Mohatta-Palace-Canvas-16x20-1-2048x1544.jpg" alt="Mohatta Palace" loading="lazy" decoding="async">
-          <div class="card-content">
-            <h3>Mohatta Palace</h3>
-            <p>A striking heritage building designed with intricate stonework, domes, and arches. Today it serves as a prestigious museum hosting exhibitions that connect visitors with regional art and history.</p>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <img class="attraction-image" src="https://pmm.com.pk/wp-content/uploads/2022/01/IMG_8897.jpg" alt="Pakistan Maritime Museum" loading="lazy" decoding="async">
-          <div class="card-content">
-            <h3>Pakistan Maritime Museum</h3>
-            <p>An expansive park and gallery featuring naval vessels, a real legacy submarine, aircraft displays, and interactive outdoor exhibits mapping the country's seafaring defense history.</p>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <img class="attraction-image" src="https://stdc.gos.pk/wp-content/uploads/2024/10/Mazar-e-Quaid-Canvas-16x20-1-2048x1544.jpg" alt="Mazar-e-Quaid" loading="lazy" decoding="async">
-          <div class="card-content">
-            <h3>Mazar-e-Quaid</h3>
-            <p>The final resting place of Quaid-e-Azam Muhammad Ali Jinnah. This iconic white marble mausoleum features minimalist modernist-Islamic architecture and is surrounded by a vast tranquil park.</p>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <img class="attraction-image" src="https://antiquities.sindhculture.gov.pk/wp-content/uploads/2022/01/88f135a483ef01fac8d7b920488085e4_L.jpg" alt="Frere Hall" loading="lazy" decoding="async">
-          <div class="card-content">
-            <h3>Frere Hall</h3>
-            <p>A Venetian Gothic-style building dating back to the British colonial era. It houses a historic library and showcases a massive, renowned ceiling mural painted by the legendary artist Sadequain.</p>
-          </div>
-        </article>
-
+    <!-- Quick Facts Table -->
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">At a glance</span>
+          <h2>Quick Facts</h2>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Attraction</th>
+                <th>Type</th>
+                <th>Highlight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mazar-e-Quaid</td>
+                <td>Monument</td>
+                <td>White marble mausoleum (1971)</td>
+              </tr>
+              <tr>
+                <td>Clifton Beach</td>
+                <td>Coastline</td>
+                <td>Arabian Sea sunsets &amp; street food</td>
+              </tr>
+              <tr>
+                <td>Mohatta Palace</td>
+                <td>Museum</td>
+                <td>Heritage architecture &amp; art</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Quick Facts</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Attraction</th>
-            <th>Area</th>
-            <th>Highlight</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Clifton Beach</td>
-            <td>Clifton</td>
-            <td>Seaside recreation and sunset views</td>
-          </tr>
-          <tr>
-            <td>Mohatta Palace</td>
-            <td>Clifton</td>
-            <td>Heritage architecture and exhibitions</td>
-          </tr>
-          <tr>
-            <td>Pakistan Maritime Museum</td>
-            <td>Karsaz</td>
-            <td>Naval history and outdoor displays</td>
-          </tr>
-          <tr>
-            <td>Mazar-e-Quaid</td>
-            <td>Jamshed Quarters</td>
-            <td>National monument and marble architecture</td>
-          </tr>
-          <tr>
-            <td>Frere Hall</td>
-            <td>Saddar</td>
-            <td>Venetian Gothic design and Sadequain ceiling mural</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>Visitor Information</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Detail</th>
-            <th>Information</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Best Time to Visit</td>
-            <td>November to March for cooler weather and comfortable sightseeing</td>
-          </tr>
-          <tr>
-            <td>Nearest Airport</td>
-            <td>Jinnah International Airport, Karachi</td>
-          </tr>
-          <tr>
-            <td>Known For</td>
-            <td>Coastline, museums, seafood, markets, and urban culture</td>
-          </tr>
-          <tr>
-            <td>Must-Try Food</td>
-            <td>Biryani, bun kebab, seafood, nihari, and roadside chai</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>Why Visit Karachi?</h2>
-      <div class="info-grid">
-        <article class="info-card">
-          <h3>Coastal City Life</h3>
-          <p>Karachi gives visitors access to Pakistan's Arabian Sea coastline, with beaches, promenades, seafood restaurants, and sea-breeze evenings that feel different from inland destinations.</p>
-        </article>
-        <article class="info-card">
-          <h3>Culture and Heritage</h3>
-          <p>From Mohatta Palace to historic neighborhoods and museums, Karachi preserves stories of trade, migration, architecture, and public life from many eras of Pakistan's history.</p>
-        </article>
-        <article class="info-card">
-          <h3>Food and Markets</h3>
-          <p>The city is famous for late-night food streets, busy bazaars, and a mix of regional flavors brought by communities from across Pakistan.</p>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 PakVista. Built with HTML5 &amp; CSS3. | Explore Pakistan's Beauty.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">🌿 PakVista</span>
+        <p>Your guide to the most breathtaking destinations across Pakistan — mountains, monuments, and timeless culture.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lahore.html">Lahore</a></li>
+          <li><a href="hunza.html">Hunza Valley</a></li>
+          <li><a href="karachi.html">Karachi</a></li>
+          <li><a href="swat.html">Swat Valley</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <p>Plan your trip around UNESCO World Heritage Sites, alpine lakes, ancient bazaars, and some of the highest mountains on the planet.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PakVista. Discover the beauty of Pakistan.</p>
+    </div>
   </footer>
+
+  <script>
+    document.documentElement.classList.add('js');
+    document.addEventListener('DOMContentLoaded', function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    });
+  </script>
 
 </body>
 </html>
