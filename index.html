@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PakVista – Discover Pakistan</title>
+  <meta name="description" content="PakVista is your guide to Pakistan's most breathtaking destinations — from the Mughal grandeur of Lahore to the towering peaks of Hunza and Swat.">
+  <title>PakVista – Discover the Beauty of Pakistan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
   <nav class="nav-bar">
     <span class="nav-logo">🌿 PakVista</span>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="lahore.html">Lahore</a></li>
       <li><a href="hunza.html">Hunza</a></li>
       <li><a href="karachi.html">Karachi</a></li>
@@ -21,106 +25,215 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
-    <h1>Welcome to PakVista</h1>
-    <p>Your guide to Pakistan's most breathtaking destinations — from ancient forts to towering mountain peaks.</p>
+  <header class="hero hero-home">
+    <div class="hero-inner">
+      <span class="eyebrow">Welcome to Pakistan</span>
+      <h1>Discover the Beauty of Pakistan</h1>
+      <p>From ancient Mughal forts and golden deserts to turquoise lakes and the world's mightiest mountains — your journey begins here.</p>
+      <div class="hero-actions">
+        <a href="#destinations" class="btn">Explore Destinations</a>
+        <a href="hunza.html" class="btn btn-ghost">Visit Hunza Valley</a>
+      </div>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
   </header>
 
   <main>
 
     <!-- About Pakistan Tourism -->
-    <section>
-      <h2>About Pakistan's Tourism</h2>
-      <p>
-        Pakistan is a land of extraordinary diversity, home to some of the world's tallest mountain ranges,
-        ancient civilisations, and vibrant cultural heritage. From the Karakoram Highway winding through
-        snow-capped peaks to the bustling bazaars of historic cities, Pakistan offers a travel experience
-        unlike any other.
-      </p>
-      <p>
-        The country is home to six of the world's seventeen peaks above 8,000 metres, hundreds of ancient
-        archaeological sites, and a culinary tradition that spans thousands of years. Whether you seek
-        adventure, history, or natural beauty, Pakistan has something extraordinary to offer.
-      </p>
+    <section class="section">
+      <div class="container prose reveal">
+        <span class="eyebrow">About the country</span>
+        <h2>A Land of Extraordinary Diversity</h2>
+        <p>
+          Pakistan is a land of extraordinary diversity, home to some of the world's tallest mountain ranges,
+          ancient civilisations, and a vibrant cultural heritage. From the Karakoram Highway winding through
+          snow-capped peaks to the bustling bazaars of historic cities, Pakistan offers a travel experience
+          unlike any other.
+        </p>
+        <p>
+          The country is home to six of the world's seventeen peaks above 8,000 metres, hundreds of ancient
+          archaeological sites, and a culinary tradition that spans thousands of years. Whether you seek
+          adventure, history, or natural beauty, Pakistan has something extraordinary to offer.
+        </p>
+      </div>
     </section>
 
     <!-- Destinations -->
-    <section>
-      <h2>Explore Our Top Destinations</h2>
-      <p>PakVista highlights five iconic destinations across Pakistan. Click any destination to learn more.</p>
-
-      <div class="destination-grid">
-
-        <div class="destination-card">
-          <h3>Lahore</h3>
-          <p>City of Gardens, Mughal grandeur, and rich cultural heritage.</p>
-          <a href="lahore.html">Explore Lahore</a>
+    <section class="section section-tinted" id="destinations">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where to go</span>
+          <h2>Explore Our Top Destinations</h2>
+          <p>Five iconic destinations across Pakistan, each with its own story. Click any card to discover more.</p>
         </div>
 
-        <div class="destination-card">
-          <h3>Hunza Valley</h3>
-          <p>Stunning mountain landscapes, turquoise lakes, and ancient forts.</p>
-          <a href="hunza.html">Explore Hunza</a>
-        </div>
+        <div class="destination-grid">
 
-        <div class="destination-card">
-          <h3>Karachi</h3>
-          <p>City of Lights — coastal energy, museums, and urban culture.</p>
-          <a href="karachi.html">Explore Karachi</a>
-        </div>
+          <div class="destination-card reveal d1">
+            <div class="card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Badshahi_Mosque_front_picture.jpg" alt="The red-sandstone Badshahi Mosque in Lahore" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Lahore</h3>
+              <p>City of Gardens — Mughal grandeur, rich heritage, and legendary cuisine.</p>
+              <a href="lahore.html" class="btn">Explore Lahore</a>
+            </div>
+          </div>
 
-        <div class="destination-card">
-          <h3>Swat Valley</h3>
-          <p>Switzerland of Pakistan — lush valleys, ski resorts, and bazaars.</p>
-          <a href="swat.html">Explore Swat</a>
-        </div>
+          <div class="destination-card reveal d2">
+            <div class="card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Hunza_Valley_HDR.jpg" alt="Mountain landscape of the Hunza Valley" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Hunza Valley</h3>
+              <p>Stunning mountain landscapes, turquoise lakes, and centuries-old forts.</p>
+              <a href="hunza.html" class="btn">Explore Hunza</a>
+            </div>
+          </div>
 
+          <div class="destination-card reveal d3">
+            <div class="card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Dolmen_Towers_Karachi.jpg" alt="The skyline of Karachi by the Arabian Sea" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Karachi</h3>
+              <p>City of Lights — coastal energy, museums, beaches, and urban culture.</p>
+              <a href="karachi.html" class="btn">Explore Karachi</a>
+            </div>
+          </div>
+
+          <div class="destination-card reveal d4">
+            <div class="card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Mahodand_l.jpg" alt="Mahodand Lake surrounded by mountains in the Swat Valley" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Swat Valley</h3>
+              <p>The Switzerland of Pakistan — lush valleys, alpine lakes, and bazaars.</p>
+              <a href="swat.html" class="btn">Explore Swat</a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
     <!-- Why Visit -->
-    <section>
-      <h2>Why Visit Pakistan?</h2>
-      <article>
-        <h3>Natural Wonders</h3>
-        <p>
-          Pakistan is home to K2, the world's second highest peak, along with Nanga Parbat, Broad Peak,
-          and countless glaciers. The Karakoram, Himalayan, and Hindu Kush ranges converge here, making
-          it a paradise for trekkers and mountaineers from around the world.
-        </p>
-      </article>
-      <article>
-        <h3>Rich History & Heritage</h3>
-        <p>
-          From the ancient ruins of Mohenjo-daro to the Mughal architecture of Lahore, Pakistan's
-          history spans over 5,000 years. The country hosts numerous UNESCO World Heritage Sites and
-          archaeological wonders that draw historians and explorers alike.
-        </p>
-      </article>
-      <article>
-        <h3>Warm Hospitality</h3>
-        <p>
-          Pakistanis are known worldwide for their warmth and hospitality. Guests are treated with
-          great respect, and visitors consistently describe their welcome as one of the most memorable
-          aspects of their journey through Pakistan.
-        </p>
-      </article>
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Pakistan</span>
+          <h2>Reasons to Visit</h2>
+          <p>A rare blend of nature, history, and heartfelt hospitality awaits every traveller.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal d1">
+            <span class="feature-icon" aria-hidden="true">🏔️</span>
+            <h3>Natural Wonders</h3>
+            <p>
+              Home to K2, the world's second-highest peak, along with Nanga Parbat and countless
+              glaciers. The Karakoram, Himalayan, and Hindu Kush ranges converge here — a paradise
+              for trekkers and mountaineers.
+            </p>
+          </article>
+          <article class="feature-card reveal d2">
+            <span class="feature-icon" aria-hidden="true">🏛️</span>
+            <h3>Rich History &amp; Heritage</h3>
+            <p>
+              From the ancient ruins of Mohenjo-daro to the Mughal architecture of Lahore, Pakistan's
+              history spans over 5,000 years, with numerous UNESCO World Heritage Sites to explore.
+            </p>
+          </article>
+          <article class="feature-card reveal d3">
+            <span class="feature-icon" aria-hidden="true">🤝</span>
+            <h3>Warm Hospitality</h3>
+            <p>
+              Pakistanis are known worldwide for their warmth. Guests are treated with great respect,
+              and visitors consistently describe their welcome as the most memorable part of the journey.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Image Placeholder -->
-    <section>
-      <h2>A Glimpse of Pakistan!</h2>
-      <figure>
-        <div class="img-placeholder">📸 Pakistan Landscape – Image Placeholder</div>
-        <figcaption>The majestic landscapes of Pakistan — from mountains to coastlines.</figcaption>
-      </figure>
+    <!-- Gallery -->
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">In pictures</span>
+          <h2>A Glimpse of Pakistan</h2>
+          <p>Iconic landmarks and landscapes from every corner of the country.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="reveal d1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Chogori.jpg" alt="K2, the second-highest mountain in the world" loading="lazy">
+            <figcaption>K2 — the second-highest peak on Earth</figcaption>
+          </figure>
+          <figure class="reveal d2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ali_Mujtaba_WLM2017_FAISAL_MOSQUE_019.jpg" alt="The Faisal Mosque in Islamabad" loading="lazy">
+            <figcaption>Faisal Mosque, Islamabad</figcaption>
+          </figure>
+          <figure class="reveal d3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Minar_e_Pakistan_2021.jpg" alt="Minar-e-Pakistan monument in Lahore" loading="lazy">
+            <figcaption>Minar-e-Pakistan, Lahore</figcaption>
+          </figure>
+          <figure class="reveal d4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Attabad.jpg" alt="The turquoise water of Attabad Lake in Hunza" loading="lazy">
+            <figcaption>Attabad Lake, Hunza</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    <p>&copy; 2026 PakVista. Built with HTML5 &amp; CSS3. | Explore Pakistan's Beauty.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">🌿 PakVista</span>
+        <p>Your guide to the most breathtaking destinations across Pakistan — mountains, monuments, and timeless culture.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lahore.html">Lahore</a></li>
+          <li><a href="hunza.html">Hunza Valley</a></li>
+          <li><a href="karachi.html">Karachi</a></li>
+          <li><a href="swat.html">Swat Valley</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <p>Plan your trip around UNESCO World Heritage Sites, alpine lakes, ancient bazaars, and some of the highest mountains on the planet.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PakVista. Discover the beauty of Pakistan.</p>
+    </div>
   </footer>
+
+  <script>
+    document.documentElement.classList.add('js');
+    document.addEventListener('DOMContentLoaded', function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    });
+  </script>
 
 </body>
 </html>
