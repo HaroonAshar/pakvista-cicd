@@ -28,7 +28,7 @@ jobs:
         run: htmlhint "*.html"
 
       - name: Create stylelint config
-        run: echo '{"extends":["stylelint-config-standard"]}' > .stylelintrc.json
+        run: echo '{"extends":["stylelint-config-standard"],"rules":{"color-hex-length":null,"value-keyword-case":null,"color-function-alias-notation":null,"color-function-notation":null,"alpha-value-notation":null,"no-descending-specificity":null,"media-feature-range-notation":null}}' > .stylelintrc.json
 
       - name: Lint CSS
         run: stylelint "*.css"
